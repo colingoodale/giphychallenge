@@ -14,9 +14,10 @@ function createButton() {
 $(".buttons").on('click', displayGiph());
 
 function displayGiph() {
+    $("#container").empty();
     var input = $(this).attr("data-name");
     console.log(input)
-    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + input + "&api_key=d4RfkXHMO0Rn1L5OuDEeBvnP57G8yt9x&1";
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + input + "&api_key=d4RfkXHMO0Rn1L5OuDEeBvnP57G8yt9x";
 
     $.ajax({
         url: queryURL,
